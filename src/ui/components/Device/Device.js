@@ -15,13 +15,28 @@ const Device = ({ name, brand, price, imgSrc }) => (
       <Card variant="defaultWithBorder">
         <Box between={4}>
           <FlexGrid.Row horizontalAlign="center">
-            <Image src={imgSrc} alt="iphone image" width={200} height={200} />
+            <Image
+              testid="image"
+              src={imgSrc}
+              alt="iphone image"
+              width={200}
+              height={200}
+            />
           </FlexGrid.Row>
           <Box>
-            <Heading level="h3">{brand}</Heading>
-            <Heading level="h2">{name}</Heading>
+            <Heading testid="heading-brand" level="h3">
+              {brand}
+            </Heading>
+            <Heading testid="heading-name" level="h2">
+              {name}
+            </Heading>
           </Box>
-          <PriceLockup size="medium" price={price} signDirection="left" />
+          <PriceLockup
+            testid="price-lockup"
+            size="medium"
+            price={price}
+            signDirection="left"
+          />
         </Box>
         <Box vertical={4}>
           <HairlineDivider />
